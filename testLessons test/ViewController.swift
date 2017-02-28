@@ -8,11 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+class ViewController: UIViewController {
+  
   var loans = [Loan(name: "Михаил", country: "Россия", use:"На бухло", cost: 2000), Loan(name: "Немихаил", country: "Россия", use:"Не на бухло", cost: 2000), Loan(name: "Артур", country: "Россия", use:"На новую компанию", cost: 202200), Loan(name: "Александр", country: "Россия", use:"На новую импрезу 5", cost: 202200000), Loan(name: "Сашка", country: "Россия", use:"Хочу мак бук про 2020 года", cost: 202200)]
-
-
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +21,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.didReceiveMemoryWarning()
     
     }
+
+
+}
+
+
+// MARK: - UITableViewDelegate
+
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
   
   func numberOfSections(in tableView: UITableView) -> Int {
     return 1
@@ -41,7 +48,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     return cell
   }
-    
-
-
+  
+  
 }
+
