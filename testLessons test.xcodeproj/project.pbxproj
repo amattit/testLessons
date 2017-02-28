@@ -11,9 +11,9 @@
 		4B7672691E659FF600B668B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B7672671E659FF600B668B1 /* Main.storyboard */; };
 		4B76726B1E659FF600B668B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B76726A1E659FF600B668B1 /* Assets.xcassets */; };
 		4B76726E1E659FF600B668B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B76726C1E659FF600B668B1 /* LaunchScreen.storyboard */; };
-		4B7672761E65A0DA00B668B1 /* KivaListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7672751E65A0DA00B668B1 /* KivaListTableViewController.swift */; };
 		4B7672781E65A0ED00B668B1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7672771E65A0ED00B668B1 /* TableViewCell.swift */; };
 		4B76727C1E65A21200B668B1 /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B76727B1E65A21200B668B1 /* Loan.swift */; };
+		4B76727E1E65A9D000B668B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B76727D1E65A9D000B668B1 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,9 +23,9 @@
 		4B76726A1E659FF600B668B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B76726D1E659FF600B668B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B76726F1E659FF600B668B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4B7672751E65A0DA00B668B1 /* KivaListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KivaListTableViewController.swift; path = ../KivaListTableViewController.swift; sourceTree = "<group>"; };
 		4B7672771E65A0ED00B668B1 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = ../TableViewCell.swift; sourceTree = "<group>"; };
 		4B76727B1E65A21200B668B1 /* Loan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
+		4B76727D1E65A9D000B668B1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +72,8 @@
 		4B7672791E65A1F400B668B1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4B76727D1E65A9D000B668B1 /* ViewController.swift */,
 				4B7672771E65A0ED00B668B1 /* TableViewCell.swift */,
-				4B7672751E65A0DA00B668B1 /* KivaListTableViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -159,8 +159,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B76727E1E65A9D000B668B1 /* ViewController.swift in Sources */,
 				4B7672781E65A0ED00B668B1 /* TableViewCell.swift in Sources */,
-				4B7672761E65A0DA00B668B1 /* KivaListTableViewController.swift in Sources */,
 				4B7672641E659FF500B668B1 /* AppDelegate.swift in Sources */,
 				4B76727C1E65A21200B668B1 /* Loan.swift in Sources */,
 			);

@@ -9,10 +9,10 @@
 import Foundation
 
 class Loan {
-  var name: String = ""
-  var country: String = ""
-  var use: String = ""
-  var cost: Int = 0
+  var name: String
+  var country: String
+  var use: String
+  var cost: Int
   
   init(name: String, country: String, use:String, cost: Int) {
     self.cost = cost
