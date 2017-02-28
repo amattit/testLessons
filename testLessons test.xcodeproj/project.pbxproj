@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		4B7672641E659FF500B668B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7672631E659FF500B668B1 /* AppDelegate.swift */; };
-		4B7672661E659FF500B668B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7672651E659FF500B668B1 /* ViewController.swift */; };
 		4B7672691E659FF600B668B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B7672671E659FF600B668B1 /* Main.storyboard */; };
 		4B76726B1E659FF600B668B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B76726A1E659FF600B668B1 /* Assets.xcassets */; };
 		4B76726E1E659FF600B668B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B76726C1E659FF600B668B1 /* LaunchScreen.storyboard */; };
+		4B7672761E65A0DA00B668B1 /* KivaListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7672751E65A0DA00B668B1 /* KivaListTableViewController.swift */; };
+		4B7672781E65A0ED00B668B1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7672771E65A0ED00B668B1 /* TableViewCell.swift */; };
+		4B76727C1E65A21200B668B1 /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B76727B1E65A21200B668B1 /* Loan.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4B7672601E659FF500B668B1 /* testLessons test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "testLessons test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B7672631E659FF500B668B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4B7672651E659FF500B668B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4B7672681E659FF600B668B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B76726A1E659FF600B668B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B76726D1E659FF600B668B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B76726F1E659FF600B668B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B7672751E65A0DA00B668B1 /* KivaListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KivaListTableViewController.swift; path = ../KivaListTableViewController.swift; sourceTree = "<group>"; };
+		4B7672771E65A0ED00B668B1 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = ../TableViewCell.swift; sourceTree = "<group>"; };
+		4B76727B1E65A21200B668B1 /* Loan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,32 @@
 		4B7672621E659FF500B668B1 /* testLessons test */ = {
 			isa = PBXGroup;
 			children = (
+				4B76727A1E65A20400B668B1 /* Model */,
+				4B7672791E65A1F400B668B1 /* View */,
 				4B7672631E659FF500B668B1 /* AppDelegate.swift */,
-				4B7672651E659FF500B668B1 /* ViewController.swift */,
 				4B7672671E659FF600B668B1 /* Main.storyboard */,
 				4B76726A1E659FF600B668B1 /* Assets.xcassets */,
 				4B76726C1E659FF600B668B1 /* LaunchScreen.storyboard */,
 				4B76726F1E659FF600B668B1 /* Info.plist */,
 			);
 			path = "testLessons test";
+			sourceTree = "<group>";
+		};
+		4B7672791E65A1F400B668B1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B7672771E65A0ED00B668B1 /* TableViewCell.swift */,
+				4B7672751E65A0DA00B668B1 /* KivaListTableViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4B76727A1E65A20400B668B1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B76727B1E65A21200B668B1 /* Loan.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B7672661E659FF500B668B1 /* ViewController.swift in Sources */,
+				4B7672781E65A0ED00B668B1 /* TableViewCell.swift in Sources */,
+				4B7672761E65A0DA00B668B1 /* KivaListTableViewController.swift in Sources */,
 				4B7672641E659FF500B668B1 /* AppDelegate.swift in Sources */,
+				4B76727C1E65A21200B668B1 /* Loan.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +288,7 @@
 				DEVELOPMENT_TEAM = 8FR82B7BH7;
 				INFOPLIST_FILE = "testLessons test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Mikhail-Seregin.testLessons-test";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mikhail-Seregin.testLessons";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -277,7 +301,7 @@
 				DEVELOPMENT_TEAM = 8FR82B7BH7;
 				INFOPLIST_FILE = "testLessons test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Mikhail-Seregin.testLessons-test";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mikhail-Seregin.testLessons";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -302,6 +326,7 @@
 				4B7672741E659FF600B668B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
