@@ -53,8 +53,8 @@ enum API: APIMethodProtocol {
     switch method {
     case .get:
       return try Alamofire.URLEncoding.default.encode(urlRequest, with: params)
-    case .post:
-      return try Alamofire.JSONEncoding.default.encode(urlRequest, with: params)
+//    case .post:
+//      return try Alamofire.JSONEncoding.default.encode(urlRequest, with: params)
     default:
       break
     }

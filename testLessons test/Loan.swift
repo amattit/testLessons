@@ -7,17 +7,22 @@
 //
 
 import Foundation
+import ObjectMapper
 
-class Loan {
-  var name: String
-  var country: String
-  var use: String
-  var cost: Int
+class Loan: Mappable {
+  var name: String?
+  var country: String?
+  var use: String?
+  var cost: Int?
   
-  init(name: String, country: String, use:String, cost: Int) {
-    self.cost = cost
-    self.country = country
-    self.name = name
-    self.use = use
+  required init?(map: Map){
+    
+  }
+  
+  func mapping(map: Map) {
+    name <- map["name"]
+    country <- map["location.country"]
+    use <- map["use"]
+    cost <- map["loan_amount"]
   }
 }
