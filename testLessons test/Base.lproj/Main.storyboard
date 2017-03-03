@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zFg-91-9Gf" id="xTS-dP-mqj">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVa-LH-QIt">
@@ -63,10 +63,10 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="Cost" destination="h2I-aL-RGS" id="h4j-TX-hTR"/>
-                                            <outlet property="Country" destination="mlz-Bw-01Z" id="bOP-DS-1Qd"/>
-                                            <outlet property="Name" destination="TVa-LH-QIt" id="Wj1-En-w6C"/>
-                                            <outlet property="Use" destination="Beg-af-vEr" id="chT-hy-5Tt"/>
+                                            <outlet property="cost" destination="h2I-aL-RGS" id="cse-xU-tyK"/>
+                                            <outlet property="country" destination="mlz-Bw-01Z" id="bGS-Mm-eaO"/>
+                                            <outlet property="name" destination="TVa-LH-QIt" id="UNe-os-rdA"/>
+                                            <outlet property="use" destination="Beg-af-vEr" id="iRs-i7-qgQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -75,33 +75,17 @@
                                     <outlet property="delegate" destination="qfL-5f-FVb" id="GvC-aw-EDa"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cF0-HO-Ae5">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gAP-mf-F84">
-                                        <rect key="frame" x="177" y="323" width="20" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </activityIndicatorView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aYX-rp-muu" firstAttribute="leading" secondItem="tgi-7e-jvQ" secondAttribute="leading" id="3Yi-Vl-2an"/>
                             <constraint firstItem="aYX-rp-muu" firstAttribute="top" secondItem="tgi-7e-jvQ" secondAttribute="top" id="A5j-WJ-tbs"/>
-                            <constraint firstItem="cF0-HO-Ae5" firstAttribute="leading" secondItem="tgi-7e-jvQ" secondAttribute="leading" id="JVG-cU-OQR"/>
                             <constraint firstItem="FBM-Lq-ehp" firstAttribute="top" secondItem="aYX-rp-muu" secondAttribute="bottom" id="QU2-Wz-h6J"/>
-                            <constraint firstItem="cF0-HO-Ae5" firstAttribute="top" secondItem="tgi-7e-jvQ" secondAttribute="top" id="W3v-vL-6vz"/>
-                            <constraint firstAttribute="trailing" secondItem="cF0-HO-Ae5" secondAttribute="trailing" id="dia-u9-Z8N"/>
-                            <constraint firstItem="FBM-Lq-ehp" firstAttribute="top" secondItem="cF0-HO-Ae5" secondAttribute="bottom" id="uQb-dU-Jqg"/>
                             <constraint firstAttribute="trailing" secondItem="aYX-rp-muu" secondAttribute="trailing" id="vhN-AU-yjL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Список" id="3LZ-Kc-dW2"/>
                     <connections>
-                        <outlet property="cleanView" destination="cF0-HO-Ae5" id="jbo-iX-aC4"/>
-                        <outlet property="isLoadView" destination="gAP-mf-F84" id="Si5-uu-Bl2"/>
                         <outlet property="tableView" destination="aYX-rp-muu" id="VPG-nh-SzL"/>
                     </connections>
                 </viewController>

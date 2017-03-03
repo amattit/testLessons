@@ -5,4 +5,5 @@ use_frameworks!
 target 'testLessons test' do
 pod 'Alamofire'
 pod 'AlamofireObjectMapper'
+pod 'DZNEmptyDataSet'
 end

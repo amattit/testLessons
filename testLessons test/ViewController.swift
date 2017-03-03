@@ -11,11 +11,9 @@ import UIKit
 class ViewController: UIViewController {
   
   let loanService = LoanService()
-  var loans: [Loan]?
+  var loans = [Loan]()
   
-  @IBOutlet weak var cleanView: UIView!
   @IBOutlet weak var tableView: UITableView!
-  @IBOutlet weak var isLoadView: UIActivityIndicatorView!
   override func viewDidLoad() {
     super.viewDidLoad()
     loanService.delegate = self
@@ -52,22 +50,16 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    if loans == nil {
-      return 0
-    } else {
-      cleanView.isHidden = true
-      isLoadView.isHidden = true
-      return loans!.count
-    }
+      return loans.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
     
-        cell.Name.text = loans?[indexPath.row].name
-        cell.Cost.text = String(describing: loans?[indexPath.row].cost)
-        cell.Country.text = loans?[indexPath.row].country
-        cell.Use.text = loans?[indexPath.row].use
+        cell.name.text = loans[indexPath.row].name
+        cell.cost.text = String(describing: loans[indexPath.row].cost)
+        cell.country.text = loans[indexPath.row].country
+        cell.use.text = loans[indexPath.row].use
     
     return cell
   }
