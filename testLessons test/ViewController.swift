@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DZNEmptyDataSet
 
 class ViewController: UIViewController {
   
@@ -18,6 +19,9 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     loanService.delegate = self
     loanService.getLoans()
+    tableView.emptyDataSetSource = self
+    tableView.emptyDataSetDelegate = self
+    tableView.tableFooterView = UIView()
   }
   
   override func didReceiveMemoryWarning() {
@@ -63,7 +67,31 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     return cell
   }
+}
+
+// MARK: - DZNEmptyDataSetDelegate
+
+extension ViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
   
+  func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+    let str = "Здравствуйте"
+    let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)]
+    return NSAttributedString(string: str, attributes: attrs)
+  }
+  
+  func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+    let str = "данные загружаются"
+    let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)]
+    return NSAttributedString(string: str, attributes: attrs)
+  }
+  
+  func loadActivity(forEmptyDataSet scrollView: UIScrollView) -> UIView {
+    let loadActivity = UIActivityIndicatorView(frame: view.frame)
+    loadActivity.center = view.center
+    loadActivity.startAnimating()
+    scrollView.addSubview(loadActivity)
+    return loadActivity
+  }
   
 }
 
