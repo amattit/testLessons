@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zFg-91-9Gf" id="xTS-dP-mqj">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVa-LH-QIt">
@@ -89,15 +89,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pnO-fF-T4k">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pnO-fF-T4k">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Ts2-TK-bqT" customClass="PetsTableViewCell" customModule="testLessons_test" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Ts2-TK-bqT" customClass="PetsTableViewCell" customModule="testLessons_test" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ts2-TK-bqT" id="RYO-Nn-PuV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpe-Kd-nFc">
@@ -126,13 +126,17 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ebH-Hs-1gU" id="hL0-FK-90a"/>
+                                    <outlet property="delegate" destination="ebH-Hs-1gU" id="GVH-sK-Z0A"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pnO-fF-T4k" firstAttribute="top" secondItem="gWi-Ah-3lN" secondAttribute="bottom" id="0nZ-gS-IrA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pnO-fF-T4k" secondAttribute="trailing" id="GEy-uX-OzS"/>
-                            <constraint firstItem="pnO-fF-T4k" firstAttribute="leading" secondItem="euD-LJ-N4B" secondAttribute="leadingMargin" id="TxZ-hB-b9D"/>
+                            <constraint firstItem="pnO-fF-T4k" firstAttribute="top" secondItem="gWi-Ah-3lN" secondAttribute="bottom" constant="-64" id="0nZ-gS-IrA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pnO-fF-T4k" secondAttribute="trailing" constant="-16" id="GEy-uX-OzS"/>
+                            <constraint firstItem="pnO-fF-T4k" firstAttribute="leading" secondItem="euD-LJ-N4B" secondAttribute="leadingMargin" constant="-16" id="TxZ-hB-b9D"/>
                             <constraint firstItem="7VN-5n-fzc" firstAttribute="top" secondItem="pnO-fF-T4k" secondAttribute="bottom" id="XL1-au-yGH"/>
                         </constraints>
                     </view>

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import DZNEmptyDataSet
 
 class PetsViewController: UIViewController {
   
@@ -22,9 +21,6 @@ class PetsViewController: UIViewController {
         super.viewDidLoad()
       petService.delegate = self
       petService.getPets(userId: userId)
-      tableView.emptyDataSetSource = self
-      tableView.emptyDataSetDelegate = self
-      tableView.tableFooterView = UIView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,19 +59,4 @@ extension PetsViewController: PetServiceDelegate {
     print(error)
   }
   
-}
-
-extension PetsViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
-  
-  func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
-    let str = "Здравствуйте"
-    let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)]
-    return NSAttributedString(string: str, attributes: attrs)
-  }
-  
-  func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
-    let str = "данные загружаются"
-    let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)]
-    return NSAttributedString(string: str, attributes: attrs)
-  }
 }
