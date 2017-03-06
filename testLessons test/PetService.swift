@@ -26,7 +26,6 @@ class PetService: NSObject {
       case .failure(let error):
         self.delegate?.didFaildWithError(error: error)
       }
-      
     }
   }
 }

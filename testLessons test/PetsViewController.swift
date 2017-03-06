@@ -45,9 +45,8 @@ extension PetsViewController: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PetsTableViewCell
-    
-    cell.textLabel?.text = pets[indexPath.row].name
-    
+    cell.name.text = pets[indexPath.row].name
+    cell.birthday.text = pets[indexPath.row].birthday
     return cell
   }
   

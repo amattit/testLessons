@@ -10,11 +10,11 @@ import Foundation
 import ObjectMapper
 
 class Dog: Mappable {
-  var id: Int!
-  var userId: Int!
-  var name: String!
-  var birthday: String!
-  var descriptions: String!
+  var id: Int?
+  var userId: Int?
+  var name: String?
+  var birthday: String?
+  var descriptions: String?
   
   required init?(map: Map) {
     
@@ -22,7 +22,7 @@ class Dog: Mappable {
   
   func mapping(map: Map) {
     id <- map["id"]
-    userId <- map["userId"]
+    userId <- map["user_Id"]
     name <- map["name"]
     birthday <- map["birthday"]
     descriptions <- map["descriptions"]
