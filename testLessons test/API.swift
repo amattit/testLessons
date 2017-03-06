@@ -19,21 +19,26 @@ protocol APIMethodProtocol: URLRequestConvertible {
 
 enum API: APIMethodProtocol {
  
-  case getLoans
+  case getUsers
+  case getUsersPets(userId: String)
   
-  static let baseURLString = "https://api.kivaws.org/v1/"
+  static let baseURLString = "http://localhost:8080/"
   
   var method: HTTPMethod {
     switch self {
-    case .getLoans:
+    case .getUsers:
+      return .get
+    case .getUsersPets:
       return .get
     }
   }
   
   var path: String {
     switch self {
-    case .getLoans:
-      return API.baseURLString + "loans/newest.json"
+    case .getUsers:
+      return API.baseURLString + "users"
+    case .getUsersPets(let userId):
+      return API.baseURLString + "users" + "/\(userId)" + "/pets"
     }
   }
   

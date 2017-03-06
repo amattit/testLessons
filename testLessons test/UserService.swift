@@ -10,19 +10,19 @@ import Foundation
 import Alamofire
 import AlamofireObjectMapper
 
-protocol LoanServiceDelegate {
-  func didReciveLoans(loans: [Loan])
+protocol UserServiceDelegate {
+  func didReciveUsers(users: [User])
   func didFaildWithError(error: Error)
 }
 
-class LoanService: NSObject {
-  var delegate: LoanServiceDelegate?
+class UserService: NSObject {
+  var delegate: UserServiceDelegate?
   
-  func getLoans() {
-    Alamofire.request(API.getLoans).responseArray(queue: DispatchQueue.main, keyPath: "loans") { (response: DataResponse<[Loan]>) in
+  func getUsers() {
+    Alamofire.request(API.getUsers).responseArray(queue: DispatchQueue.main, keyPath: "") { (response: DataResponse<[User]>) in
       switch response.result {
       case .success(let value):
-        self.delegate?.didReciveLoans(loans: value)
+        self.delegate?.didReciveUsers(users: value)
       case .failure(let error):
         self.delegate?.didFaildWithError(error: error)
       }

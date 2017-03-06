@@ -11,14 +11,19 @@ import DZNEmptyDataSet
 
 class ViewController: UIViewController {
   
-  let loanService = LoanService()
-  var loans = [Loan]()
+  let userService = UserService()
+  var users = [User]()
+  
+  @IBAction func refresh(_ sender: Any) {
+    userService.getUsers()
+  }
   
   @IBOutlet weak var tableView: UITableView!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    loanService.delegate = self
-    loanService.getLoans()
+    userService.delegate = self
+    userService.getUsers()
     tableView.emptyDataSetSource = self
     tableView.emptyDataSetDelegate = self
     tableView.tableFooterView = UIView()
@@ -34,9 +39,9 @@ class ViewController: UIViewController {
 
 // MARK: - LoanServiceDelegate
 
-extension ViewController: LoanServiceDelegate {
-  func didReciveLoans(loans: [Loan]) {
-    self.loans = loans
+extension ViewController: UserServiceDelegate {
+  func didReciveUsers(users: [User]) {
+    self.users = users
     tableView.reloadData()
   }
   func didFaildWithError(error: Error) {
@@ -54,19 +59,24 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return loans.count
+      return users.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
     
-        cell.name.text = loans[indexPath.row].name
-        cell.cost.text = String(describing: loans[indexPath.row].cost)
-        cell.country.text = loans[indexPath.row].country
-        cell.use.text = loans[indexPath.row].use
+        cell.name.text = users[indexPath.row].name
     
     return cell
   }
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "ToPetsController" {
+      if let indexPath = tableView.indexPathForSelectedRow {
+        let dc = segue.destination as! PetsViewController
+        dc.userId = String(users[indexPath.row].id)
+    }
+  }
+}
 }
 
 // MARK: - DZNEmptyDataSetDelegate
@@ -84,14 +94,5 @@ extension ViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
     let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)]
     return NSAttributedString(string: str, attributes: attrs)
   }
-  
-  func loadActivity(forEmptyDataSet scrollView: UIScrollView) -> UIView {
-    let loadActivity = UIActivityIndicatorView(frame: view.frame)
-    loadActivity.center = view.center
-    loadActivity.startAnimating()
-    scrollView.addSubview(loadActivity)
-    return loadActivity
-  }
-  
 }
 

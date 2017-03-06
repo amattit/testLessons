@@ -10,9 +10,6 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
   @IBOutlet weak var name: UILabel!
-  @IBOutlet weak var country: UILabel!
-  @IBOutlet weak var use: UILabel!
-  @IBOutlet weak var cost: UILabel!
   
   override func awakeFromNib() {
     super.awakeFromNib()

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		30F2975CEF5CA465A14F5ABA /* Pods_testLessons_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76270592DF09DE44AEF91D02 /* Pods_testLessons_test.framework */; };
+		4B544C921E696D22009D02E2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B544C911E696D22009D02E2 /* User.swift */; };
+		4B544C941E696E70009D02E2 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B544C931E696E70009D02E2 /* Dog.swift */; };
+		4B544C981E699BC8009D02E2 /* PetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B544C971E699BC8009D02E2 /* PetsViewController.swift */; };
+		4B544C9A1E699CD5009D02E2 /* PetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B544C991E699CD5009D02E2 /* PetsTableViewCell.swift */; };
+		4B544C9C1E6C4774009D02E2 /* PetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B544C9B1E6C4774009D02E2 /* PetService.swift */; };
 		4B7672641E659FF500B668B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7672631E659FF500B668B1 /* AppDelegate.swift */; };
 		4B7672691E659FF600B668B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B7672671E659FF600B668B1 /* Main.storyboard */; };
 		4B76726B1E659FF600B668B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B76726A1E659FF600B668B1 /* Assets.xcassets */; };
@@ -16,10 +21,15 @@
 		4B76727C1E65A21200B668B1 /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B76727B1E65A21200B668B1 /* Loan.swift */; };
 		4B76727E1E65A9D000B668B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B76727D1E65A9D000B668B1 /* ViewController.swift */; };
 		4B7672811E65B29900B668B1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7672801E65B29900B668B1 /* API.swift */; };
-		4BF8943E1E685ADD00CECBBF /* LoansService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8943D1E685ADD00CECBBF /* LoansService.swift */; };
+		4BF8943E1E685ADD00CECBBF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8943D1E685ADD00CECBBF /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B544C911E696D22009D02E2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4B544C931E696E70009D02E2 /* Dog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		4B544C971E699BC8009D02E2 /* PetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetsViewController.swift; sourceTree = "<group>"; };
+		4B544C991E699CD5009D02E2 /* PetsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetsTableViewCell.swift; sourceTree = "<group>"; };
+		4B544C9B1E6C4774009D02E2 /* PetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetService.swift; sourceTree = "<group>"; };
 		4B7672601E659FF500B668B1 /* testLessons test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "testLessons test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B7672631E659FF500B668B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B7672681E659FF600B668B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,7 +40,7 @@
 		4B76727B1E65A21200B668B1 /* Loan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
 		4B76727D1E65A9D000B668B1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4B7672801E65B29900B668B1 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		4BF8943D1E685ADD00CECBBF /* LoansService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoansService.swift; sourceTree = "<group>"; };
+		4BF8943D1E685ADD00CECBBF /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		76270592DF09DE44AEF91D02 /* Pods_testLessons_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testLessons_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80EF3651C28267FBD16B353B /* Pods-testLessons test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testLessons test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testLessons test/Pods-testLessons test.debug.xcconfig"; sourceTree = "<group>"; };
 		9C188F9CBF865D4D2DE52762 /* Pods-testLessons test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testLessons test.release.xcconfig"; path = "Pods/Target Support Files/Pods-testLessons test/Pods-testLessons test.release.xcconfig"; sourceTree = "<group>"; };
@@ -55,6 +65,24 @@
 				9C188F9CBF865D4D2DE52762 /* Pods-testLessons test.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		4B544C951E696FBF009D02E2 /* user */ = {
+			isa = PBXGroup;
+			children = (
+				4B76727D1E65A9D000B668B1 /* ViewController.swift */,
+				4B7672771E65A0ED00B668B1 /* TableViewCell.swift */,
+			);
+			name = user;
+			sourceTree = "<group>";
+		};
+		4B544C961E699BAD009D02E2 /* pets */ = {
+			isa = PBXGroup;
+			children = (
+				4B544C971E699BC8009D02E2 /* PetsViewController.swift */,
+				4B544C991E699CD5009D02E2 /* PetsTableViewCell.swift */,
+			);
+			name = pets;
 			sourceTree = "<group>";
 		};
 		4B7672571E659FF500B668B1 = {
@@ -94,8 +122,8 @@
 		4B7672791E65A1F400B668B1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4B76727D1E65A9D000B668B1 /* ViewController.swift */,
-				4B7672771E65A0ED00B668B1 /* TableViewCell.swift */,
+				4B544C961E699BAD009D02E2 /* pets */,
+				4B544C951E696FBF009D02E2 /* user */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -104,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				4B76727B1E65A21200B668B1 /* Loan.swift */,
+				4B544C911E696D22009D02E2 /* User.swift */,
+				4B544C931E696E70009D02E2 /* Dog.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -119,7 +149,8 @@
 		4BF8943C1E685AC500CECBBF /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				4BF8943D1E685ADD00CECBBF /* LoansService.swift */,
+				4BF8943D1E685ADD00CECBBF /* UserService.swift */,
+				4B544C9B1E6C4774009D02E2 /* PetService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -257,11 +288,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B7672811E65B29900B668B1 /* API.swift in Sources */,
+				4B544C9C1E6C4774009D02E2 /* PetService.swift in Sources */,
 				4B76727E1E65A9D000B668B1 /* ViewController.swift in Sources */,
 				4B7672781E65A0ED00B668B1 /* TableViewCell.swift in Sources */,
+				4B544C9A1E699CD5009D02E2 /* PetsTableViewCell.swift in Sources */,
 				4B7672641E659FF500B668B1 /* AppDelegate.swift in Sources */,
+				4B544C981E699BC8009D02E2 /* PetsViewController.swift in Sources */,
 				4B76727C1E65A21200B668B1 /* Loan.swift in Sources */,
-				4BF8943E1E685ADD00CECBBF /* LoansService.swift in Sources */,
+				4BF8943E1E685ADD00CECBBF /* UserService.swift in Sources */,
+				4B544C941E696E70009D02E2 /* Dog.swift in Sources */,
+				4B544C921E696D22009D02E2 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
