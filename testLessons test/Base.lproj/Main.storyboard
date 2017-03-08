@@ -77,10 +77,10 @@
             </objects>
             <point key="canvasLocation" x="648.79999999999995" y="112.89355322338831"/>
         </scene>
-        <!--Pets View Controller-->
+        <!--Мои собаки-->
         <scene sceneID="ISe-DP-w7O">
             <objects>
-                <viewController id="ebH-Hs-1gU" customClass="PetsViewController" customModule="testLessons_test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Мои собаки" id="ebH-Hs-1gU" customClass="PetsViewController" customModule="testLessons_test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gWi-Ah-3lN"/>
                         <viewControllerLayoutGuide type="bottom" id="7VN-5n-fzc"/>
@@ -90,8 +90,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pnO-fF-T4k">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Xrx-P7-OZo">
+                                    <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <items>
+                                        <barButtonItem systemItem="add" id="CX2-Jp-Fhy">
+                                            <connections>
+                                                <segue destination="Lox-QL-JcP" kind="showDetail" identifier="newPet" id="U44-tG-9du"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </items>
+                                </toolbar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Ts2-TK-bqT" customClass="PetsTableViewCell" customModule="testLessons_test" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -134,7 +145,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pnO-fF-T4k" firstAttribute="top" secondItem="gWi-Ah-3lN" secondAttribute="bottom" constant="-64" id="0nZ-gS-IrA"/>
+                            <constraint firstItem="pnO-fF-T4k" firstAttribute="top" secondItem="gWi-Ah-3lN" secondAttribute="bottom" constant="-20" id="0nZ-gS-IrA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pnO-fF-T4k" secondAttribute="trailing" constant="-16" id="GEy-uX-OzS"/>
                             <constraint firstItem="pnO-fF-T4k" firstAttribute="leading" secondItem="euD-LJ-N4B" secondAttribute="leadingMargin" constant="-16" id="TxZ-hB-b9D"/>
                             <constraint firstItem="7VN-5n-fzc" firstAttribute="top" secondItem="pnO-fF-T4k" secondAttribute="bottom" id="XL1-au-yGH"/>
@@ -146,7 +157,117 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3VR-uL-QlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1559.2" y="120.98950524737631"/>
+            <point key="canvasLocation" x="1517.5999999999999" y="66.11694152923539"/>
+        </scene>
+        <!--Новый питомец-->
+        <scene sceneID="S7s-ql-9Xu">
+            <objects>
+                <viewController title="Новый питомец" id="Lox-QL-JcP" customClass="NewPetViewController" customModule="testLessons_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oak-7k-K0Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="tkM-rH-gbo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IRI-hS-zqI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hfq-Yl-x2g">
+                                <rect key="frame" x="0.0" y="66" width="375" height="295"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="295" id="IDY-aR-NZi"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кличка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9K-Yx-5zJ">
+                                <rect key="frame" x="16" y="369" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cbz-p4-MI8">
+                                <rect key="frame" x="16" y="398" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата рождения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hV9-Cw-Hi7">
+                                <rect key="frame" x="16" y="436" width="124" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TLI-wY-HVo">
+                                <rect key="frame" x="16" y="458" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дополнительная информация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9Z-Vz-eCi">
+                                <rect key="frame" x="16" y="496" width="240" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LS6-Xo-Rya">
+                                <rect key="frame" x="16" y="525" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OM2-u0-mNx">
+                                <rect key="frame" x="0.0" y="578" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Отмена" id="hq0-EN-sZZ">
+                                        <connections>
+                                            <action selector="cancel:" destination="Lox-QL-JcP" id="csj-9B-ppJ"/>
+                                            <segue destination="JYb-tj-EAa" kind="unwind" unwindAction="unwindFor:" id="lcG-UY-N7e"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Сохранить" id="o6R-30-aDJ">
+                                        <connections>
+                                            <action selector="savePet:" destination="Lox-QL-JcP" id="doF-dI-gsd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LS6-Xo-Rya" firstAttribute="trailing" secondItem="IRI-hS-zqI" secondAttribute="trailingMargin" id="0TL-Tz-0WI"/>
+                            <constraint firstItem="Cbz-p4-MI8" firstAttribute="leading" secondItem="IRI-hS-zqI" secondAttribute="leadingMargin" id="1af-54-Mg0"/>
+                            <constraint firstItem="hfq-Yl-x2g" firstAttribute="centerX" secondItem="Cbz-p4-MI8" secondAttribute="centerX" id="2Ox-Zt-VL1"/>
+                            <constraint firstItem="Cbz-p4-MI8" firstAttribute="top" secondItem="x9K-Yx-5zJ" secondAttribute="bottom" constant="8" id="2kH-Pw-uaj"/>
+                            <constraint firstItem="TLI-wY-HVo" firstAttribute="top" secondItem="hV9-Cw-Hi7" secondAttribute="bottom" constant="1" id="67v-Yj-xeV"/>
+                            <constraint firstItem="OM2-u0-mNx" firstAttribute="leading" secondItem="IRI-hS-zqI" secondAttribute="leading" id="6lw-br-uOD"/>
+                            <constraint firstItem="O9Z-Vz-eCi" firstAttribute="top" secondItem="TLI-wY-HVo" secondAttribute="bottom" constant="8" id="DsT-x9-AE7"/>
+                            <constraint firstItem="LS6-Xo-Rya" firstAttribute="leading" secondItem="IRI-hS-zqI" secondAttribute="leadingMargin" id="IcB-dD-MYY"/>
+                            <constraint firstItem="hV9-Cw-Hi7" firstAttribute="top" secondItem="Cbz-p4-MI8" secondAttribute="bottom" constant="8" id="KkG-eF-csv"/>
+                            <constraint firstItem="O9Z-Vz-eCi" firstAttribute="leading" secondItem="IRI-hS-zqI" secondAttribute="leadingMargin" id="OjM-fJ-Evo"/>
+                            <constraint firstItem="hfq-Yl-x2g" firstAttribute="leading" secondItem="IRI-hS-zqI" secondAttribute="leading" id="Ozt-KQ-t9n"/>
+                            <constraint firstItem="hV9-Cw-Hi7" firstAttribute="leading" secondItem="IRI-hS-zqI" secondAttribute="leadingMargin" id="PJn-jT-kTD"/>
+                            <constraint firstAttribute="trailing" secondItem="hfq-Yl-x2g" secondAttribute="trailing" id="SNn-N4-y5N"/>
+                            <constraint firstItem="TLI-wY-HVo" firstAttribute="trailing" secondItem="IRI-hS-zqI" secondAttribute="trailingMargin" id="Tef-Ka-VNe"/>
+                            <constraint firstItem="x9K-Yx-5zJ" firstAttribute="top" secondItem="hfq-Yl-x2g" secondAttribute="bottom" constant="8" id="Vr2-h1-pos"/>
+                            <constraint firstItem="OM2-u0-mNx" firstAttribute="top" secondItem="LS6-Xo-Rya" secondAttribute="bottom" constant="23" id="Xjl-WH-VPi"/>
+                            <constraint firstItem="TLI-wY-HVo" firstAttribute="leading" secondItem="IRI-hS-zqI" secondAttribute="leadingMargin" id="eAX-b5-b1b"/>
+                            <constraint firstAttribute="trailing" secondItem="OM2-u0-mNx" secondAttribute="trailing" id="gtZ-eV-deo"/>
+                            <constraint firstItem="LS6-Xo-Rya" firstAttribute="top" secondItem="O9Z-Vz-eCi" secondAttribute="bottom" constant="8" id="iwP-D2-a8F"/>
+                            <constraint firstItem="x9K-Yx-5zJ" firstAttribute="leading" secondItem="IRI-hS-zqI" secondAttribute="leadingMargin" id="jS4-n0-ZbG"/>
+                            <constraint firstItem="hfq-Yl-x2g" firstAttribute="top" secondItem="oak-7k-K0Q" secondAttribute="bottom" constant="46" id="oyB-4E-6Bq"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="petBirthday" destination="TLI-wY-HVo" id="La0-8C-kta"/>
+                        <outlet property="petDescription" destination="LS6-Xo-Rya" id="fKK-iw-jYp"/>
+                        <outlet property="petImage" destination="hfq-Yl-x2g" id="jWJ-PW-Bld"/>
+                        <outlet property="petName" destination="Cbz-p4-MI8" id="8IC-Dc-1QG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P52-8Z-DEW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="JYb-tj-EAa" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2468" y="-281.10944527736132"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="klG-Na-CnB">

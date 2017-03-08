@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		30F2975CEF5CA465A14F5ABA /* Pods_testLessons_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76270592DF09DE44AEF91D02 /* Pods_testLessons_test.framework */; };
+		4B35C2811E70B59600BEDC91 /* UserStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B35C2801E70B59600BEDC91 /* UserStorageService.swift */; };
+		4B35C2831E70B69800BEDC91 /* PetStorageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B35C2821E70B69800BEDC91 /* PetStorageDelegate.swift */; };
+		4B35C2861E70B99700BEDC91 /* NewPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B35C2851E70B99700BEDC91 /* NewPetViewController.swift */; };
 		4B544C921E696D22009D02E2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B544C911E696D22009D02E2 /* User.swift */; };
 		4B544C941E696E70009D02E2 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B544C931E696E70009D02E2 /* Dog.swift */; };
 		4B544C981E699BC8009D02E2 /* PetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B544C971E699BC8009D02E2 /* PetsViewController.swift */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B35C2801E70B59600BEDC91 /* UserStorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStorageService.swift; sourceTree = "<group>"; };
+		4B35C2821E70B69800BEDC91 /* PetStorageDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetStorageDelegate.swift; sourceTree = "<group>"; };
+		4B35C2851E70B99700BEDC91 /* NewPetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPetViewController.swift; sourceTree = "<group>"; };
 		4B544C911E696D22009D02E2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4B544C931E696E70009D02E2 /* Dog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		4B544C971E699BC8009D02E2 /* PetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetsViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +73,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4B35C2841E70B96600BEDC91 /* newPet */ = {
+			isa = PBXGroup;
+			children = (
+				4B35C2851E70B99700BEDC91 /* NewPetViewController.swift */,
+			);
+			name = newPet;
+			sourceTree = "<group>";
+		};
 		4B544C951E696FBF009D02E2 /* user */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +93,7 @@
 		4B544C961E699BAD009D02E2 /* pets */ = {
 			isa = PBXGroup;
 			children = (
+				4B35C2841E70B96600BEDC91 /* newPet */,
 				4B544C971E699BC8009D02E2 /* PetsViewController.swift */,
 				4B544C991E699CD5009D02E2 /* PetsTableViewCell.swift */,
 			);
@@ -150,6 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				4BF8943D1E685ADD00CECBBF /* UserService.swift */,
+				4B35C2801E70B59600BEDC91 /* UserStorageService.swift */,
+				4B35C2821E70B69800BEDC91 /* PetStorageDelegate.swift */,
 				4B544C9B1E6C4774009D02E2 /* PetService.swift */,
 			);
 			name = Services;
@@ -295,9 +312,12 @@
 				4B7672641E659FF500B668B1 /* AppDelegate.swift in Sources */,
 				4B544C981E699BC8009D02E2 /* PetsViewController.swift in Sources */,
 				4B76727C1E65A21200B668B1 /* Loan.swift in Sources */,
+				4B35C2811E70B59600BEDC91 /* UserStorageService.swift in Sources */,
+				4B35C2861E70B99700BEDC91 /* NewPetViewController.swift in Sources */,
 				4BF8943E1E685ADD00CECBBF /* UserService.swift in Sources */,
 				4B544C941E696E70009D02E2 /* Dog.swift in Sources */,
 				4B544C921E696D22009D02E2 /* User.swift in Sources */,
+				4B35C2831E70B69800BEDC91 /* PetStorageDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

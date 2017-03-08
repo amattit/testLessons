@@ -28,5 +28,16 @@ class PetService: NSObject {
       }
     }
   }
+  
+  func newPet(userId: String, name: String, birthday: String, descriptions: String) {
+    Alamofire.request(API.postNewPet(userId: userId, name: name, birthday: birthday, descriptions: descriptions)).responseArray(queue: DispatchQueue.main, keyPath: "") { (response: DataResponse<[Dog]>) in
+      switch response.result {
+      case.success(let value):
+        self.delegate?.didRecivePets(pets: value)
+      case.failure(let error):
+        self.delegate?.didFaildWithError(error: error)
+      }
+    }
+  }
 }
 

@@ -21,6 +21,7 @@ enum API: APIMethodProtocol {
  
   case getUsers
   case getUsersPets(userId: String)
+  case postNewPet(userId: String, name: String, birthday: String, descriptions: String)
   
   static let baseURLString = "http://localhost:8080/"
   
@@ -30,6 +31,8 @@ enum API: APIMethodProtocol {
       return .get
     case .getUsersPets:
       return .get
+    case .postNewPet:
+      return .post
     }
   }
   
@@ -39,11 +42,20 @@ enum API: APIMethodProtocol {
       return API.baseURLString + "users"
     case .getUsersPets(let userId):
       return API.baseURLString + "users" + "/\(userId)" + "/pets"
+    case .postNewPet(userId: _, name: _, birthday: _, descriptions: _):
+      return API.baseURLString + "pets"
     }
   }
   
   var params: Parameters? {
     switch self {
+    case .postNewPet(userId: let userId, name: let name, birthday: let birthday, descriptions: let descriptions):
+      return [
+      "userId": "\(userId)",
+      "name": "\(name)",
+      "birthday": "\(birthday)",
+      "descriptions": "\(descriptions)"
+      ]
     default:
       return nil
     }
@@ -58,8 +70,8 @@ enum API: APIMethodProtocol {
     switch method {
     case .get:
       return try Alamofire.URLEncoding.default.encode(urlRequest, with: params)
-//    case .post:
-//      return try Alamofire.JSONEncoding.default.encode(urlRequest, with: params)
+    case .post:
+      return try Alamofire.JSONEncoding.default.encode(urlRequest, with: params)
     default:
       break
     }

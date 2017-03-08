@@ -45,6 +45,16 @@ extension PetsViewController: UITableViewDelegate, UITableViewDataSource {
     cell.birthday.text = pets[indexPath.row].birthday
     return cell
   }
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "newPet" {
+        let dc = segue.destination as! NewPetViewController
+        dc.userId = userId
+    }
+  }
+  
+  @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
+    
+  }
   
 }
 
